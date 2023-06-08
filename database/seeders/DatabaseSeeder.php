@@ -8,6 +8,7 @@ use App\Models\Meal;
 use App\Models\Ingredient;
 use App\Models\Tag;
 use App\Models\Category;
+use Astrotomic\Translatable\Locales;
 
 
 class DatabaseSeeder extends Seeder
@@ -24,6 +25,16 @@ class DatabaseSeeder extends Seeder
         //     'email' => 'test@example.com',
         // ]);
 
+        Meal::factory(5)->create();
+        Ingredient::factory(5)->create();
+        Tag::factory(5)->create();
+        Category::factory(5)->create();
+        app()->setLocale('fr');
+        Meal::factory(5)->create();
+        Ingredient::factory(5)->create();
+        Tag::factory(5)->create();
+        Category::factory(5)->create();
+        app()->setLocale('es');
         Meal::factory(5)->create();
         Ingredient::factory(5)->create();
         Tag::factory(5)->create();

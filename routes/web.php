@@ -1,7 +1,10 @@
 <?php
 
-use Illuminate\Support\Facades\Route;
+use App\Models\Category;
+use App\Models\Ingredient;
+use App\Models\Tag;
 use App\Models\Meal;
+use Illuminate\Support\Facades\Route;
 
 /*
 |--------------------------------------------------------------------------
@@ -17,6 +20,10 @@ use App\Models\Meal;
 Route::get('/', function () {
     return view('meals', [
         'heading' => 'Jela svijeta',
-        'meals' => Meal::all()
-    ]);
+        'meals' => Meal::all(),
+        'tags' => Tag::all(),
+        'ingredients'=> Ingredient::all(),
+        'categories'=> Category::all()
+        ]
+    );
 });

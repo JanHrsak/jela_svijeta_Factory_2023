@@ -17,8 +17,8 @@ class TagFactory extends Factory
     public function definition(): array
     {
         return [
-            'title'=>fake()->sentence(),
-            'slug'=>fake()->md5()
+            'title' => $this->faker->sentence(),
+            'slug'=>$this->faker->md5()
         ];
     }
 }
