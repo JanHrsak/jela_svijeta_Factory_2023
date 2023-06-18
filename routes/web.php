@@ -17,7 +17,7 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
+/* Route::get('/', function () {
     return view('meals', [
         'heading' => 'Jela svijeta',
         'meals' => Meal::all(),
@@ -26,4 +26,4 @@ Route::get('/', function () {
         'categories'=> Category::all()
         ]
     );
-});
+}); */

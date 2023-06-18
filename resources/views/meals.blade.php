@@ -7,8 +7,11 @@
     @endforeach
 </nav>
 <h1>{{$heading}}</h1>
+<h2> {{$meal['title']}}</h2>
+<p>{{$meal['description']}}</p>
 
-<div style="border:1px solid black; width:49%; padding:5px;">
+
+{{-- <div style="border:1px solid black; width:49%; padding:5px;">
     <h3 style="color:cornflowerblue"> Meals </h3>
     @foreach($meals as $meal)
         <h2> {{$meal['title']}}</h2>
@@ -33,4 +36,4 @@
     @foreach($tags as $tag)
         <h2> {{$tag['title']}}</h2>
     @endforeach 
-</div>
+</div> --}}
