@@ -18,11 +18,11 @@ class SetLocale
     {
         $language = 'en'; // default
 
-        if (request('language')) {
-            $language = request('language');
-            session()->put('language', $language);
-        } elseif (session('language')) {
-            $language = session('language');
+        if (request('lang')) {
+            $language = request('lang');
+            session()->put('lang', $language);
+        } elseif (session('lang')) {
+            $language = session('lang');
         }
         app()->setLocale($language);
 

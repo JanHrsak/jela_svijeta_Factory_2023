@@ -8,6 +8,8 @@ use App\Models\Meal;
 use App\Models\Ingredient;
 use App\Models\Tag;
 use App\Models\Category;
+use App\Models\meals_ingredients;
+use App\Models\Meals_tags;
 use Astrotomic\Translatable\Locales;
 
 
@@ -39,6 +41,8 @@ class DatabaseSeeder extends Seeder
         Ingredient::factory(5)->create();
         Tag::factory(5)->create();
         Category::factory(5)->create();
+        Meals_tags::factory(50)->create();
+        meals_ingredients::factory(50)->create();
 
     }
 }

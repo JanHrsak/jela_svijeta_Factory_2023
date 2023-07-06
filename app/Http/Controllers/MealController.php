@@ -20,4 +20,9 @@ class MealController extends Controller
     public function search($title){
         return MealTranslation::where('title', $title)->get();
     }
+
+    public function index(Request $request)
+    {
+        return Meal::filter($request->all())->get();
+    }
 }

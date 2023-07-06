@@ -19,7 +19,7 @@ class MealFactory extends Factory
      */
     public function definition(): array
     {   
-        
+        $rng = rand(0,1);
         return [
             
             /* 'title' => json_encode([
@@ -53,7 +53,8 @@ class MealFactory extends Factory
             ]), */
             'title' => $this->faker->sentence(),
             'description' => $this->faker->text(),
-            'status' => 'created'
+            'status' => 'created',
+            'category_id' => $this->faker->numberBetween(0, 15),
         ]; 
     }
 }
